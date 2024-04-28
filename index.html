@@ -16,56 +16,144 @@
       <aside>
         <div class="toggle">
           <div class="logo">
-            <img src="images/logo.jpg">
+            <img src="images/logo.jpg" />
             <h2><span class="danger">AST</span></h2>
           </div>
           <div class="close" id="close-btn">
             <span class="material-icons-sharp"> close </span>
           </div>
         </div>
-        <div class="sidebar"></div>
-        <a href="#">
-          <span class="material-icons-sharp"> home </span>
-          <h3>Home</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> dashboard </span>
-          <h3>Dashboard</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> trending_up </span>
-          <h3>Analytics</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> receipt </span>
-          <h3>Reports</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> work_outline </span>
-          <h3>Work</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> mail_outline </span>
-          <h3>Tickets</h3>
-          <span class="message-count">27</span>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> leaderboard </span>
-          <h3>LeaderBoard</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> settings </span>
-          <h3>Settings</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> add </span>
-          <h3>New Login</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> logout </span>
-          <h3>Logout</h3>
-        </a>
+        <div class="sidebar">
+          <a href="#">
+            <span class="material-icons-sharp"> home </span>
+            <h3>Home</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> dashboard </span>
+            <h3>Dashboard</h3>
+            l
+          </a>
+          <a href="#" class="active">
+            <span class="material-icons-sharp"> trending_up </span>
+            <h3>Analytics</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> receipt </span>
+            <h3>Reports</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> work_outline </span>
+            <h3>Work</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> mail_outline </span>
+            <h3>Tickets</h3>
+            <span class="message-count">27</span>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> leaderboard </span>
+            <h3>LeaderBoard</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> settings </span>
+            <h3>Settings</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> add </span>
+            <h3>New Login</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+          </a>
+        </div>
       </aside>
+      <!-- Side bar Over -->
+
+      <!-- MAin content Start -->
+      <main>
+        <h1>Budget Tracker</h1>
+        <!-- Tracker -->
+        <div class="analyse">
+          <div class="sales">
+            <div class="status">
+              <div class="info">
+                <h1>
+                  <p>Total Budget -</p>
+                  $69,696
+                </h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="120" cy="75" r="50"></circle>
+                </svg>
+                <div class="percentage">
+                  <p>100%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Budget Spend -->
+          <div class="spend">
+            <div class="status">
+              <div class="info">
+                <h1>
+                  <p>Budget spend -</p>
+                  $9,696
+                </h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="120" cy="75" r="50"></circle>
+                </svg>
+                <div class="percentage">
+                  <p>14%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Budget remaining -->
+          <div class="remain">
+            <div class="status">
+              <div class="info">
+                <h1>
+                  <p>Budget Remaining -</p>
+                  $60,000
+                </h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="120" cy="75" r="50"></circle>
+                </svg>
+                <div class="percentage">
+                  <p>86%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Budget tracker Complete -->
+        <!-- To -_do LIst start -->
+
+        <div class="todo-app">
+          <h1 class="todo-app__header">Todo App</h1>
+          <div class="to-do__input-form">
+            <input
+              type="text"
+              class="task-input"
+              placeholder="//Enter a new task"
+            />
+          </div>
+          <ul class="todo-app__list">
+            <li class="task">
+              <div class="text">
+                <div class="circle"></div>
+                <span class="task-name">Sample Task</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
     </div>
 
     <script src="app.js"></script>
