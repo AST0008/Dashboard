@@ -167,7 +167,6 @@ main .analyse > div:hover {
   box-shadow: none;
 }
 
-
 main .analyse h3 {
   margin-left: 0.6rem;
   font-size: 1rem;
@@ -216,22 +215,24 @@ main .analyse .progress .percentage {
   height: 100%;
   width: 100%;
 }
-.to-do{
+.to-do {
   width: 45rem;
   margin-top: 2rem;
+  margin-right: 2rem;
   cursor: pointer;
+  border-radius: 2rem;
   margin-left: 2rem;
   background-color: #fff;
   box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
-ul {
+.to-do ul {
   margin: 0;
   padding: 0;
 }
 
-ul li {
+.to-do ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -245,22 +246,22 @@ ul li {
   user-select: none;
 }
 
-ul li:nth-child(odd) {
+.to-do ul li:nth-child(odd) {
   background: #f9f9f9;
 }
 
-ul li:hover {
+.to-do ul li:hover {
   background: #ddd;
 }
 
-ul li.checked {
+.to-do ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
-ul li.checked::before {
-  content: '';
+.to-do ul li.checked::before {
+  content: "";
   position: absolute;
   border-color: #fff;
   border-style: solid;
@@ -289,8 +290,12 @@ ul li.checked::before {
   padding: 30px 40px;
   color: white;
   text-align: center;
+  border-radius: 2rem;
 }
 
+.header h2 {
+  padding-bottom: 1rem;
+}
 .header:after {
   content: "";
   display: table;
@@ -322,4 +327,132 @@ main .header input {
 
 .addBtn:hover {
   background-color: #bbb;
+}
+
+.calendar-container {
+  background: #fff;
+  width: 450px;
+  border-radius: 10px;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  transition: all 0.3s ease;
+  border-radius: 2rem;
+}
+
+
+.calendar-container .calendar-header {
+  display: flex;
+  border-radius: 2rem;
+  background-color: #36a5f4;
+  color: #eee;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+
+.calendar-header .calendar-navigation {
+  display: flex;
+}
+
+.calendar-header .calendar-navigation span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  user-select: none;
+  color: #aeabab;
+  font-size: 1.9rem;
+}
+
+.calendar-navigation span:last-child {
+  margin-right: -10px;
+}
+
+.calendar-header .calendar-navigation span:hover {
+  background: #f2f2f2;
+  transition: all 0.3s ease;
+
+}
+
+.calendar-header .calendar-current-date {
+  font-weight: 500;
+  font-size: 1.45rem;
+}
+
+.calendar-body {
+  padding: 20px;
+}
+
+.calendar-body ul {
+  list-style: none;
+  flex-wrap: wrap;
+  display: flex;
+  text-align: center;
+}
+
+.calendar-body .calendar-dates {
+  margin-bottom: 20px;
+}
+
+.calendar-body li {
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+  color: #736a6a;
+}
+
+.calendar-header .calendar-current-date p {
+  color: #eee;
+}
+
+.calendar-body .calendar-weekdays li {
+  cursor: default;
+  font-weight: 500;
+  padding-left: 0;
+}
+
+.calendar-body .calendar-dates li {
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.calendar-dates li.inactive {
+  color: #aaa;
+}
+
+.calendar-dates li.active {
+  color: #fff;
+}
+
+.calendar-dates li::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  padding: 0;
+  height: 40px;
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.calendar-dates li.active::before {
+  background: #36a5f4;
+}
+
+.calendar-dates li:not(.active):hover::before {
+  background: #e4e1e1;
+  transition: all 0.3s ease;
+
+}
+
+.downward {
+  display: flex;
 }
