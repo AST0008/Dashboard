@@ -13,8 +13,7 @@ html {
   font-size: 14px;
 }
 body {
-  width: 100vw;
-  height: 100vh;
+  
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   overflow-x: hidden;
@@ -53,31 +52,30 @@ b {
   width: 96%;
   margin: 0 auto;
   gap: 1.8rem;
-  grid-template-columns: 12rem auto 23rem;
+
+  grid-template-columns: 1fr 3fr 1fr;
 }
-aside {
-  height: 100vh;
-}
-aside .toggle {
+
+.aside .toggle {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 1.4rem;
 }
-aside .toggle .logo {
+.aside .toggle .logo {
   display: flex;
   gap: 0.5rem;
 }
-aside .toggle .logo img {
+.aside .toggle .logo img {
   width: 2rem;
   height: 2rem;
   border-radius: 7px;
 }
-aside .toggle .close {
+.aside .toggle .close {
   padding-right: 1rem;
   display: none;
 }
-aside .sidebar {
+.aside .sidebar {
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -89,10 +87,10 @@ aside .sidebar {
   position: relative;
   transition: all 0.3s ease;
 }
-aside .sidebar:hover {
+.aside .sidebar:hover {
   box-shadow: none;
 }
-aside .sidebar a {
+.aside .sidebar a {
   display: flex;
   align-items: center;
   color: #7d8da1;
@@ -102,39 +100,39 @@ aside .sidebar a {
   margin-left: 2rem;
   transition: all 0.3s ease;
 }
-aside .sidebar a span {
+.aside .sidebar a span {
   font-size: 1.6rem;
   transition: all 0.3s ease;
 }
-aside .sidebar a:last-child {
+.aside .sidebar a:last-child {
   position: absolute;
   bottom: 2rem;
   width: 100%;
 }
 
-aside .sidebar a.active {
+.aside .sidebar a.active {
   width: 100%;
   color: #6c9bcf;
   background-color: rgba(132, 139, 200, 0.18);
   margin-left: 0;
 }
-aside .sidebar a.active::before {
+.aside .sidebar a.active::before {
   content: "";
   width: 6px;
   height: 18px;
   background-color: #6c9bcf;
 }
-aside .sidebar a.active span {
+.aside .sidebar a.active span {
   color: #6c9bcf;
   margin-left: calc(1rem - 3px);
 }
-aside .sidebar a:hover {
+.aside .sidebar a:hover {
   color: #6c9bcf;
 }
-aside .sidebar a:hover span {
+.aside .sidebar a:hover span {
   margin-left: 0.6rem;
 }
-aside .sidebar .message-count {
+.aside .sidebar .message-count {
   background-color: #ff0060;
   padding: 2px 6px;
   color: #fff;
@@ -142,17 +140,20 @@ aside .sidebar .message-count {
   border-radius: 0.4rem;
 }
 
-main {
+.main {
   margin-top: 1.4rem;
 }
+.main h1 {
+  text-align: center;
+}
 
-main .analyse {
+.main .analyse {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
 }
 
-main .analyse > div {
+.main .analyse > div {
   background-color: #fff;
   padding: 1.8rem;
   border-radius: 2rem;
@@ -163,49 +164,49 @@ main .analyse > div {
   transition: 0.3s all ease;
 }
 
-main .analyse > div:hover {
+.main .analyse > div:hover {
   box-shadow: none;
 }
 
-main .analyse h3 {
+.main .analyse h3 {
   margin-left: 0.6rem;
   font-size: 1rem;
 }
 
-main .analyse .progress {
+.main .analyse .progress {
   position: relative;
   height: 92px;
   width: 92px;
   border-radius: 50%;
 }
-main .analyse svg {
+.main .analyse svg {
   width: 17rem;
   height: 10rem;
 }
-main .analyse svg circle {
+.main .analyse svg circle {
   fill: none;
   stroke-width: 15;
   stroke-linecap: round;
   transform: translate(5px, 5px);
 }
 
-main .analyse .sales svg circle {
+.main .analyse .sales svg circle {
   stroke: #1a8cbd;
   stroke-dashoffset: -30;
   stroke-dasharray: 0;
 }
-main .analyse .spend svg circle {
+.main .analyse .spend svg circle {
   stroke: #39cb67;
   stroke-dashoffset: -30;
   stroke-dasharray: 148;
 }
-main .analyse .remain svg circle {
+.main .analyse .remain svg circle {
   stroke: #e84f4f;
   stroke-dashoffset: -50;
   stroke-dasharray: 200;
 }
 
-main .analyse .progress .percentage {
+.main .analyse .progress .percentage {
   position: absolute;
   top: 37px;
   left: 79px;
@@ -240,10 +241,10 @@ main .analyse .progress .percentage {
   font-size: 18px;
   transition: 0.2s;
 
-  -webkit-user-select: none;
+  /* -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; */
 }
 
 .to-do ul li:nth-child(odd) {
@@ -302,7 +303,7 @@ main .analyse .progress .percentage {
   clear: both;
 }
 
-main .header input {
+.main .header input {
   margin: 0;
   border: none;
   border-radius: 0;
@@ -340,7 +341,6 @@ main .header input {
   border-radius: 2rem;
 }
 
-
 .calendar-container .calendar-header {
   display: flex;
   border-radius: 2rem;
@@ -375,7 +375,6 @@ main .header input {
 .calendar-header .calendar-navigation span:hover {
   background: #f2f2f2;
   transition: all 0.3s ease;
-
 }
 
 .calendar-header .calendar-current-date {
@@ -450,9 +449,167 @@ main .header input {
 .calendar-dates li:not(.active):hover::before {
   background: #e4e1e1;
   transition: all 0.3s ease;
-
 }
 
 .downward {
   display: flex;
+}
+
+/* Weather */
+
+.app {
+  margin-top: 10rem;
+  margin-left: 2rem;
+  background-color: #fff;
+  height: 40rem;
+  padding: 5rem;
+  font-size: large;
+  border-radius: 15px;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  transition: all 0.3s ease;
+
+  text-align: center;
+}
+.app:hover {
+  box-shadow: none;
+}
+.app form {
+  display: flex;
+}
+.cityInput {
+  background-color: #f6f6f9;
+  padding: 2rem;
+
+  width: 10rem;
+  height: 2rem;
+  border: solid 2px hsla(0, 0%, 20%, 0.3);
+}
+.app button {
+  font-size: bold;
+  padding: 0.3rem;
+  margin: 1rem;
+  color: snow;
+  height: 3rem;
+  background-color: #36a5f4;
+}
+.app .card {
+  padding: 2rem;
+  display: flex;
+  font-size: 1rem;
+}
+.app .card p {
+  margin: 1rem;
+}
+.app p {
+  margin: 1rem;
+}
+/* Default styles */
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 767px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 3fr 1fr;
+  }
+ 
+  .aside {
+    height: 100vh;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  */ .aside .toggle {
+    left: -100%;
+    position: fixed;
+    z-index: 3;
+    display: inline-block;
+    height: 100vh;
+  }
+
+  .aside .sidebar {
+    position: fixed;
+    margin-top: 5rem;
+    height: 100%;
+    
+  }
+
+  .aside .toggle {
+    position: fixed;
+    height: 2rem;
+  }
+  .header input {
+    width: 60%; 
+  }
+
+  .aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 5rem;
+  }
+
+  .aside .sidebar a {
+    height: 10vh;
+  }
+  .logo h2 {
+    padding-top: 2rem;
+    font-size: 2rem;
+  }
+  .logo img {
+    height: 2rem;
+  }
+  .aside .toggle .logo img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+  }
+
+  .aside .sidebar a h3 {
+    font-size: 1rem;
+  }
+
+  .to-do {
+    width: 100%; 
+    margin-left: 0;
+    margin-right: 0; 
+  }
+
+  .calendar-container {
+    width: 100%; 
+    margin-left: 0; 
+    margin-right: 0; 
+  }
+  .main {
+   
+    grid-row: 1/2;
+    grid-column: 2/3;
+    width: 70%;
+
+    margin-left: 80px;
+  }
+
+  .main .analyse {
+    grid-template-columns: 1fr;
+
+    position: relative;
+  }
+
+  .main .analyse > div {
+    width: 25rem;
+    margin-left: 5rem;
+  }
+  .app {
+    margin-top: 0;
+    margin-left: 11rem;
+  
+    width: 70%;
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  .downward {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-right: 5px;
+    margin-left: 80px;
+  }
 }

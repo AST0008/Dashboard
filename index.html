@@ -13,11 +13,11 @@
   <body>
     <div class="container">
       <!-- SideBar Start-->
-      <aside>
+      <div class="aside">
         <div class="toggle">
           <div class="logo">
             <img src="images/logo.jpg" />
-            <h2><span class="danger">AST</span></h2>
+            <h2>AST</h2>
           </div>
           <div class="close" id="close-btn">
             <span class="material-icons-sharp"> close </span>
@@ -67,11 +67,14 @@
             <h3>Logout</h3>
           </a>
         </div>
-      </aside>
+      </div>
+
       <!-- Side bar Over -->
 
       <!-- MAin content Start -->
-      <main>
+      <div class="main">
+
+      
         <h1>Budget Tracker</h1>
         <!-- Tracker -->
         <div class="analyse">
@@ -151,21 +154,20 @@
               <li>Read a book</li>
             </ul>
           </div>
-          <!-- TO-do list End -->
-          <!-- Calender start -->
-
           <div class="calendar-container">
             <div class="calendar-header">
               <p class="calendar-current-date"></p>
               <div class="calendar-navigation">
-                <span class="material-icons-sharp" id="calendar-prev">chevron_left</span>
-
+                <span class="material-icons-sharp" id="calendar-prev"
+                  >chevron_left</span
+                >
+  
                 <span id="calendar-next" class="material-icons-sharp">
                   chevron_right
                 </span>
               </div>
             </div>
-
+  
             <div class="calendar-body">
               <ul class="calendar-weekdays">
                 <li>Sun</li>
@@ -179,10 +181,34 @@
               <ul class="calendar-dates"></ul>
             </div>
           </div>
+        </div>
+          <!-- TO-do list End -->
+          <!-- Calender start -->
+
           <!-- Calender End -->
         </div>
         <!-- Downard portion end -->
       </main>
+      <!-- <aside> -->
+      <!-- Right Side start -->
+      <!-- Weather app start-->
+      <div class="app">
+        <form class="weatherForm">
+          <input type="text" class="cityInput" placeholder="Enter City" />
+          <button type="submit">Submit</button>
+        </form>
+        <div class="card" style="display: none">
+          <p class="cityDisplay">Chennai</p>
+
+          <p class="tempDisplay">58</p>
+        </div>
+        <div class="image">
+          <img src="./images/weather.png" alt="weather image" />
+        </div>
+      </div>
+      <!-- Weather app end-->
+      <!-- Right Side end -->
+      <!-- </aside> -->
     </div>
 
     <script src="app.js"></script>
